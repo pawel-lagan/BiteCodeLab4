@@ -9,6 +9,7 @@ import java.nio.file.Path;
 
 public class CoolingFacility 
 {
+    public static final CoolingMode DEFAULT = CoolingMode.NORMAL;
     public static enum CoolingMode {
         AUTO, TURBO, NORMAL, OFF
     };
@@ -16,7 +17,7 @@ public class CoolingFacility
     private CoolingMode mode;
     
     public CoolingFacility() {
-        this(CoolingMode.OFF);
+        this(DEFAULT);
     }
     
     public CoolingFacility(CoolingMode mode) {
@@ -29,6 +30,10 @@ public class CoolingFacility
     
     public String getModeReadable() {
         return mode.name().toLowerCase();
+    }
+    
+    public String getModeReadable2() {
+        throw new NullPointerException();
     }
     
     public void changeMode(CoolingMode mode) {
