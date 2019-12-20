@@ -7,3 +7,5 @@
 *.png binary
 *.jpg binary
 *.jar binary
+*.pdf binary
+*.pptx binary
